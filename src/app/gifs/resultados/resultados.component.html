@@ -1,3 +1,23 @@
-<div class="col">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.w
+<div class="row">
+  <div class="col-md-4 col-sm-12" *ngFor="let gif of resultados">
+
+    <div class="card">
+
+      <div class="card-body">
+        <h5 class="card-title">
+          <a [href]="gif.url" target="_blank">
+            {{ gif.title}}
+          </a>
+        </h5>
+        <p class="card-text">
+
+          <img class="card-img-top" 
+          [src]="gif.images.downsized_medium.url" 
+          [alt]=" gif.title">
+
+        </p>
+      </div>
+    </div>
+
+  </div>
 </div>
